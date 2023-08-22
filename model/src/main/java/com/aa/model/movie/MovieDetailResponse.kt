@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class DetailResponseObject(
+data class MovieDetailResponse(
     @Json(name = "Title")
     val title: String?,
     @Json(name = "Year")

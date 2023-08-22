@@ -1,4 +1,4 @@
-package com.aa.local.common
+package com.aa.local.entities.movie
 
 import androidx.room.Dao
 import androidx.room.Delete

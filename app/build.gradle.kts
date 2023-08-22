@@ -36,11 +36,16 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        viewBinding = true
+        compose = true
+    }
+    composeOptions {
+//        kotlinCompilerExtensionVersion = "${libs.versions.kotlin.ext}"
+        kotlinCompilerExtensionVersion = "1.5.1"
     }
     hilt {
         enableAggregatingTask = true
     }
+
     kotlin {
         jvmToolchain(17)
         sourceSets.configureEach {
@@ -64,14 +69,33 @@ dependencies {
 
     implementation(project(":model"))
     implementation(project(":usecase"))
+
+
+    implementation(libs.compose.runtime)
+    implementation(libs.compose.lifecycle.runtime)
+    implementation(libs.compose.runtime.livedata)
+    implementation(libs.compose.material)
+    implementation(libs.compose.material.size)
+    implementation(libs.compose.animation)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.controller)
+    debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.navigation)
+    implementation(libs.compose.hilt)
+
+    implementation(libs.compose.icons)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.foundation.layout)
+
+    implementation(libs.compose.glide)
+
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
-    implementation(libs.material)
-    implementation(libs.constraintlayout)
+
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
-    implementation(libs.navigation.fragment.ktx)
-    implementation(libs.navigation.ui.ktx)
+
 
     implementation(libs.coroutines)
 

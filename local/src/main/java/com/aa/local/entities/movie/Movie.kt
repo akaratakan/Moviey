@@ -1,11 +1,11 @@
-package com.aa.local.common
+package com.aa.local.entities.movie
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
-@Entity(tableName = "movie_db")
+@Entity(tableName = "movie")
 data class Movie(
     @PrimaryKey
     @ColumnInfo(name = "id")

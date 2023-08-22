@@ -22,6 +22,7 @@ dependencies {
 
     implementation(project(":repository"))
     implementation(project(":model"))
+    implementation(project(":local"))
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)

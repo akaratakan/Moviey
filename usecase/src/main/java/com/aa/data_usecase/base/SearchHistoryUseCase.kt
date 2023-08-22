@@ -1,8 +1,9 @@
-package com.aa.data_usecase
+package com.aa.data_usecase.base
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
 import com.aa.data_usecase.base.ActionFlowUseCase
+import com.aa.local.entities.localsearch.LocalSearch
 import com.aa.model.generic.Magic
 import com.aa.model.search.SearchResponse
 import kotlinx.coroutines.CoroutineDispatcher
@@ -16,10 +17,10 @@ import javax.inject.Inject
 /**
  * Created by atakanakar on 16.08.2023
  */
-class FetchMovieUseCase @Inject constructor(
-    private val movieRepository: MovieRepository,
+class SearchHistoryUseCase @Inject constructor(
+    val movieRepository: MovieRepository,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
-) : ActionFlowUseCase<SearchResponse>() {
+) : FlowUseCase<Unit>() {
 
     private lateinit var name: String
 
@@ -27,12 +28,13 @@ class FetchMovieUseCase @Inject constructor(
         this.name = name
     }
 
-    override fun performAction(): Flow<Magic<SearchResponse>> = flow {
+    override fun makeMagic(): Flow<Magic<Unit>> = flow {
         emit(Magic.loading())
-        val detail = movieRepository.fetchMovie(name)
-        emit(Magic.success(detail))
+        movieRepository.getSearchedText()
+        emit(Magic.success(Unit))
     }.catch {
         Timber.e(it, "Fetch movie detail error")
         emit(Magic.failure(it.message.toString()))
     }.flowOn(ioDispatcher)
+
 }

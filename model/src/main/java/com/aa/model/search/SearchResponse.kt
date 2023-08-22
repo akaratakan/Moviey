@@ -3,6 +3,7 @@ package com.aa.model.search
 
 import com.squareup.moshi.Json
 
+
 data class SearchResponse(
     @Json(name = "Response")
     val response: String,

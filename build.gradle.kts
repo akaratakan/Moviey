@@ -7,5 +7,6 @@ buildscript {
     repositories {
         // other repositories...
         mavenCentral()
+        google()
     }
 }

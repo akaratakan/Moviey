@@ -2,8 +2,9 @@ package com.aa.local.di
 
 import android.content.Context
 import androidx.room.Room
-import com.aa.local.common.AppDatabase
-import com.aa.local.common.MovieDao
+import com.aa.local.entities.AppDatabase
+import com.aa.local.entities.localsearch.SearchDao
+import com.aa.local.entities.movie.MovieDao
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -42,6 +43,12 @@ internal object DatabaseModule {
     @Singleton
     fun provideMovieDao(appDatabase: AppDatabase): MovieDao {
         return appDatabase.movieDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideSearchDao(appDatabase: AppDatabase): SearchDao {
+        return appDatabase.localSearchDao()
     }
 
 }
