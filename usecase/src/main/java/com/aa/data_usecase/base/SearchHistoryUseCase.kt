@@ -30,7 +30,7 @@ class SearchHistoryUseCase @Inject constructor(
 
     override fun makeMagic(): Flow<Magic<Unit>> = flow {
         emit(Magic.loading())
-        movieRepository.getSearchedText()
+//        movieRepository.getSearchedText()
         emit(Magic.success(Unit))
     }.catch {
         Timber.e(it, "Fetch movie detail error")

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     namespace = "com.aa.local"
 
     defaultConfig {
@@ -32,6 +32,8 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":model"))
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)

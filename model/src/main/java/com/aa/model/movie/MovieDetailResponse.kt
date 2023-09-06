@@ -3,10 +3,11 @@ package com.aa.model.movie
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+
 @JsonClass(generateAdapter = true)
 data class MovieDetailResponse(
     @Json(name = "Title")
-    val title: String?,
+    val title: String,
     @Json(name = "Year")
     val year: String?,
     @Json(name = "Rated")
@@ -24,7 +25,7 @@ data class MovieDetailResponse(
     @Json(name = "Actors")
     val actors: String?,
     @Json(name = "Plot")
-    val plot: String?,
+    val plot: String,
     @Json(name = "Language")
     val language: String?,
     @Json(name = "Country")
@@ -32,7 +33,7 @@ data class MovieDetailResponse(
     @Json(name = "Awards")
     val awards: String?,
     @Json(name = "Poster")
-    val poster: String?,
+    val poster: String,
     @Json(name = "Ratings")
     val ratings: List<Rating>?,
     @Json(name = "Metascore")
@@ -42,7 +43,7 @@ data class MovieDetailResponse(
     @Json(name = "imdbVotes")
     val imdbVotes: String?,
     @Json(name = "imdbID")
-    val imdbID: String?,
+    val imdbID: String,
     @Json(name = "Type")
     val type: String?,
     @Json(name = "DVD")
@@ -55,4 +56,6 @@ data class MovieDetailResponse(
     val website: String?,
     @Json(name = "Response")
     val response: String?
-)
+) {
+    var isFav = false
+}

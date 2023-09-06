@@ -14,8 +14,8 @@ material = "1.9.0"
 constraintlayout = "2.1.4"
 lifecycle-livedata-ktx = "2.6.1"
 lifecycle-viewmodel-ktx = "2.6.1"
-navigation-fragment-ktx = "2.7.0"
-navigation-ui-ktx = "2.7.0"
+navigation-fragment-ktx = "2.7.1"
+navigation-ui-ktx = "2.7.1"
 timber = "5.0.1"
 moshi = "1.15.0"
 moshi-converter = "2.9.0"
@@ -23,24 +23,23 @@ retrofit = "2.9.0"
 okhttp = "4.11.0"
 glide = "4.15.1"
 glide-compose = "1.0.0-alpha.1"
+coil-compose = "2.4.0"
+
 hilt-navigation = "1.0.0"
 ksp = "1.9.0-1.0.12"
 room = "2.5.2"
 
 androidx-material = "1.5.0"
 material3 = "1.1.1"
-#kotlinx-compiler = "1.1.1"
 ui-tooling = "1.5.0"
 animation = "1.5.0"
 runtime = "1.5.0"
 foundation = "1.5.0"
 icons = "1.5.0"
-compose-navigation = "2.7.0"
+compose-navigation = "2.7.1"
 compose-hilt = "1.0.0"
 lifecycle-runtime-compose = "2.7.0-alpha01"
 runtime-livedata = "1.5.0"
-
-
 
 
 
@@ -53,6 +52,7 @@ compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime
 
 compose-animation = { group = "androidx.compose.animation", name = "animation", version.ref = "animation" }
 compose-material = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+#compose-material = { group = "androidx.compose.material", name = "material", version = "1.5.0" }
 compose-material-size = { group = "androidx.compose.material3", name = "material3-window-size-class", version.ref = "material3" }
 #androidx-compose-material = { group = "androidx.compose.material", name = "material", version.ref = "androidx-material" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "ui-tooling" }
@@ -66,6 +66,8 @@ compose-foundation = { group = "androidx.compose.foundation", name = "foundation
 compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "foundation" }
 
 ksp = { group = "com.google.devtools.ksp", name = "symbol-processing-api", version.ref = "ksp" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose" }
+
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-kapt = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 compose-glide = { group = "com.github.bumptech.glide", name = "compose", version.ref = "glide-compose" }

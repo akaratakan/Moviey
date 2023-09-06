@@ -18,12 +18,6 @@ package com.aa.base.ui.configuration
 
 import androidx.compose.ui.graphics.Color
 
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
-
-
 val md_theme_light_primary = Color(0xFF825500)
 val md_theme_light_onPrimary = Color(0xFFFFFFFF)
 val md_theme_light_primaryContainer = Color(0xFFFFDDB3)
@@ -85,15 +79,9 @@ val md_theme_dark_shadow = Color(0xFF000000)
 val md_theme_dark_surfaceTint = Color(0xFFFFB951)
 val md_theme_dark_outlineVariant = Color(0xFF4F4539)
 val md_theme_dark_scrim = Color(0xFF000000)
+val md_transparent_black = Color(0x99000000)
+
+
 
 
 val seed = Color(0xFF825500)
-
-val darkPrimary = Color(0xFF455A64)
-val darkSecondary = Color(0xFF546E7A)
-val darkBackground = Color(0xFF37474F)
-val darkSurface = Color(0xFF455A64)
-val darkOnPrimary = Color(0xFFFFFFFF)
-val darkOnSecondary = Color(0xFFFFFFFF)
-val darkOnBackground = Color(0xFFFFFFFF)
-val darkOnSurface = Color(0xFFFFFFFF)

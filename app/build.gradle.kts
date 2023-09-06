@@ -69,6 +69,7 @@ dependencies {
 
     implementation(project(":model"))
     implementation(project(":usecase"))
+    implementation(project(":local"))
 
 
     implementation(libs.compose.runtime)
@@ -88,7 +89,7 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.compose.foundation.layout)
 
-    implementation(libs.compose.glide)
+    implementation(libs.coil.compose)
 
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
