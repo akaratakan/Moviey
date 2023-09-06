@@ -33,9 +33,7 @@ dependencies {
     implementation(libs.okhttp.intercepter)
     implementation(libs.moshi)
     implementation(libs.moshi.converter)
-    implementation(libs.glide)
 
     implementation(libs.dagger)
-    implementation(libs.hilt.navigation)
     kapt(libs.dagger.compiler)
 }

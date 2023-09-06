@@ -94,7 +94,6 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
 
-    implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
 
 
@@ -104,6 +103,5 @@ dependencies {
     implementation(libs.moshi)
 
     implementation(libs.dagger)
-    implementation(libs.hilt.navigation)
     kapt(libs.dagger.compiler)
 }

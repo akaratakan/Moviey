@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     namespace = "com.aa.data.usecase"
 
     defaultConfig {
@@ -36,6 +36,5 @@ dependencies {
     implementation(libs.timber.log)
 
     implementation(libs.dagger)
-    implementation(libs.hilt.navigation)
     kapt(libs.dagger.compiler)
 }

@@ -56,11 +56,9 @@ dependencies {
 
 //    ksp(libs.ksp)
 
-    // json parsing
     implementation(libs.moshi)
 //    implementation(libs.ksp)
-    // di
+
     implementation(libs.dagger)
-    implementation(libs.hilt.navigation)
     kapt(libs.dagger.compiler)
 }
