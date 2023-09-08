@@ -1,0 +1,204 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "57f7c93c89f12cd1bb7ed9f62c9ec660",
+    "entities": [
+      {
+        "tableName": "movie_details",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`imdbID` TEXT NOT NULL, `title` TEXT, `year` TEXT, `rated` TEXT, `released` TEXT, `runtime` TEXT, `genre` TEXT, `director` TEXT, `writer` TEXT, `actors` TEXT, `plot` TEXT, `language` TEXT, `country` TEXT, `awards` TEXT, `poster` TEXT NOT NULL, `metascore` TEXT, `imdbRating` TEXT, `imdbVotes` TEXT, `type` TEXT, `dVD` TEXT, `boxOffice` TEXT, `production` TEXT, `website` TEXT, `response` TEXT, `isFav` INTEGER, PRIMARY KEY(`imdbID`))",
+        "fields": [
+          {
+            "fieldPath": "imdbID",
+            "columnName": "imdbID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rated",
+            "columnName": "rated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "released",
+            "columnName": "released",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "runtime",
+            "columnName": "runtime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "genre",
+            "columnName": "genre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "director",
+            "columnName": "director",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "writer",
+            "columnName": "writer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "actors",
+            "columnName": "actors",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plot",
+            "columnName": "plot",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "language",
+            "columnName": "language",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awards",
+            "columnName": "awards",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "poster",
+            "columnName": "poster",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "metascore",
+            "columnName": "metascore",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imdbRating",
+            "columnName": "imdbRating",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imdbVotes",
+            "columnName": "imdbVotes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dVD",
+            "columnName": "dVD",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "boxOffice",
+            "columnName": "boxOffice",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "production",
+            "columnName": "production",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "website",
+            "columnName": "website",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "response",
+            "columnName": "response",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isFav",
+            "columnName": "isFav",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "imdbID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "local_search",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '57f7c93c89f12cd1bb7ed9f62c9ec660')"
+    ]
+  }
+}
