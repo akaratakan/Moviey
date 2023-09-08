@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.aa.base"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -40,7 +40,7 @@ android {
     }
     composeOptions {
 //        kotlinCompilerExtensionVersion = "${libs.versions.kotlin.ext}"
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     hilt {
         enableAggregatingTask = true

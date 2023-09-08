@@ -76,13 +76,13 @@ fun BaseScreen() {
             navController = navController,
             startDestination = Screen.Search.route
         ) {
-            composable(Screen.Info.route,
+            /*composable(Screen.Info.route,
                 enterTransition = { fadeIn() },
                 exitTransition = { fadeOut() },
                 popEnterTransition = { fadeIn() },
                 popExitTransition = { fadeOut() }) {
                 Text("atakan")
-            }
+            }*/
             composable("${Screen.MovieDetail.route}/{imdb_id}",
                 enterTransition = { animateEnter },
                 exitTransition = { animateExit },
@@ -117,17 +117,6 @@ fun BaseScreen() {
 @Composable
 fun BottomBar(navController: NavController) {
     BottomAppBar(modifier = Modifier.fillMaxWidth(), actions = {
-        IconButton(onClick = {
-            navController.navigate(Screen.Info.route) {
-                launchSingleTop = true
-                popUpTo(Screen.Search.route)
-            }
-        }) {
-            Icon(
-                Screen.Info.menuImage,
-                contentDescription = "Localized description",
-            )
-        }
         IconButton(onClick = {
             navController.navigate(Screen.Favorites.route) {
                 launchSingleTop = true
@@ -168,7 +157,6 @@ fun PreviewMain() {
                 navController = navController,
                 startDestination = Screen.Search.route
             ) {
-                composable(Screen.Info.name) { Text(Screen.Info.route) }
                 composable(Screen.Favorites.name) { Text(Screen.Info.route) }
                 composable(Screen.Search.name) {
                     SearchScreen(onFieldActive = {}, onMovieItemClicked = {})

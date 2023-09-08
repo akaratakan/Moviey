@@ -10,7 +10,7 @@ android {
     namespace = "com.aa.data.usecase"
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

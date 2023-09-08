@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.kotlinAndroid)
     id(libs.plugins.kotlin.kapt.get().pluginId)
-//    id(libs.plugins.ksp.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
     id(libs.plugins.hilt.plugin.get().pluginId)
 }
@@ -11,7 +10,7 @@ android {
     namespace = "com.aa.local"
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
         kapt {
             arguments {
                 arg("room.schemaLocation", "$projectDir/schemas")
@@ -37,28 +36,15 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
-//    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    // coroutines
-//    implementation(libs.coroutines)
-//    testImplementation(libs.coroutines)
-//    testImplementation(libs.coroutines.test)
-
-    // database
+    implementation(libs.ksp)
+    kapt(libs.room.ksp)
     implementation(libs.room.ktx)
     implementation(libs.room)
-//    implementation(libs.room.coroutine)
-    kapt(libs.room.ksp)
-
-
-//    ksp(libs.ksp)
-
     implementation(libs.moshi)
-//    implementation(libs.ksp)
-
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 }

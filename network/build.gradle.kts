@@ -10,7 +10,7 @@ android {
     namespace = "com.aa.network"
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
         buildConfigField("String","URL","\"http://www.omdbapi.com/\"")
         buildConfigField("String","API_KEY","\"c38aff30\"")
     }

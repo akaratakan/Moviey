@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Base"
+rootProject.name = "Moviey"
 include(":app")
 include(":network")
 include(":local")

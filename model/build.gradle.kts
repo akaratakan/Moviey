@@ -8,7 +8,7 @@ android {
     namespace = "com.aa.model"
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 21
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
