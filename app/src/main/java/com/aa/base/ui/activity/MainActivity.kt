@@ -76,13 +76,6 @@ fun BaseScreen() {
             navController = navController,
             startDestination = Screen.Search.route
         ) {
-            /*composable(Screen.Info.route,
-                enterTransition = { fadeIn() },
-                exitTransition = { fadeOut() },
-                popEnterTransition = { fadeIn() },
-                popExitTransition = { fadeOut() }) {
-                Text("atakan")
-            }*/
             composable("${Screen.MovieDetail.route}/{imdb_id}",
                 enterTransition = { animateEnter },
                 exitTransition = { animateExit },
@@ -150,7 +143,6 @@ fun BottomBar(navController: NavController) {
 fun PreviewMain() {
     AppTheme {
         val navController = rememberNavController()
-
         Scaffold(bottomBar = { BottomBar(navController = navController) }) { padding ->
             NavHost(
                 modifier = Modifier.padding(padding),

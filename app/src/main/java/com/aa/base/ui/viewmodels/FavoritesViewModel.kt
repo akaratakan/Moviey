@@ -1,4 +1,4 @@
-package com.aa.base.ui.compose.favorite
+package com.aa.base.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.aa.base.ui.root.BaseViewModel

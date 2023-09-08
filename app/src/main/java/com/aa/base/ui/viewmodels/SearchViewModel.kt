@@ -1,4 +1,4 @@
-package com.aa.base.ui.compose.search
+package com.aa.base.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.aa.base.ui.root.BaseViewModel
@@ -12,7 +12,6 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class SearchViewModel @Inject constructor(
-//    private val searchHistoryUseCase: SearchHistoryUseCase,
     private val searchMovieUseCase: SearchMovieUseCase
 ) : BaseViewModel() {
 

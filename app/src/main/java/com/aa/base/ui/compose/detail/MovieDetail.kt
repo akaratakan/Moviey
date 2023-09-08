@@ -48,9 +48,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.aa.base.R
-import com.aa.base.ui.compose.search.ErrorText
-import com.aa.base.ui.compose.search.ProgressScreen
+import com.aa.base.ui.compose.common.ErrorPopUp
+import com.aa.base.ui.compose.common.ProgressScreen
 import com.aa.base.ui.configuration.AppTheme
+import com.aa.base.ui.viewmodels.DetailViewModel
 import com.aa.model.generic.Magic
 import com.aa.model.generic.mapData
 import com.aa.model.movie.MovieDetailResponse
@@ -64,10 +65,9 @@ fun DetailScreen(imdbId: String) {
 
     val viewModel: DetailViewModel = hiltViewModel()
 
-    LaunchedEffect(imdbId) {
-        viewModel.fetchMovie(imdbId)
-    }
+    LaunchedEffect(imdbId) { viewModel.fetchMovie(imdbId) }
     val resultState = viewModel.fetchFlow.collectAsState(initial = Magic.loading())
+    viewModel.dbFlow.collectAsState(initial = null)
     AppTheme {
         DetailLayout(resultState.value) { isFav ->
             resultState.value.mapData { data ->
@@ -80,21 +80,9 @@ fun DetailScreen(imdbId: String) {
 @Composable
 fun DetailLayout(resultState: Magic<MovieDetailResponse>, onFav: (isFav: Boolean) -> Unit) {
     when (resultState) {
-
-        is Magic.Progress -> {
-            ProgressScreen()
-        }
-
-        is Magic.Success -> {
-            MovieDetailScreen(resultState.data) {
-                onFav(it)
-            }
-        }
-
-        is Magic.Failure -> {
-            ErrorText("Failure: ${resultState.errorMessage}")
-        }
-
+        is Magic.Progress -> { ProgressScreen() }
+        is Magic.Success -> { MovieDetailScreen(resultState.data) { onFav(it) } }
+        is Magic.Failure -> { ErrorPopUp(resultState.errorMessage) }
         else -> {}
     }
 

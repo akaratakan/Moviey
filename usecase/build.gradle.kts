@@ -34,6 +34,9 @@ dependencies {
     implementation(libs.coroutines)
 
     implementation(libs.timber.log)
+    implementation(libs.moshi.converter)
+    implementation(libs.moshi)
+
 
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)

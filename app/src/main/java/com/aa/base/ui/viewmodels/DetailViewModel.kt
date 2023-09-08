@@ -1,4 +1,4 @@
-package com.aa.base.ui.compose.detail
+package com.aa.base.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.aa.base.ui.root.BaseViewModel
@@ -7,7 +7,6 @@ import com.aa.data_usecase.detail.DetailDbUseCase
 import com.aa.model.movie.MovieDetailResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import javax.inject.Inject
 
 /**
@@ -20,7 +19,6 @@ class DetailViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     val fetchFlow = fetchMovieUseCase.resultFlow
-
     fun fetchMovie(name: String) {
         fetchMovieUseCase.initName(name)
         viewModelScope.launch {
@@ -29,21 +27,10 @@ class DetailViewModel @Inject constructor(
     }
 
     val dbFlow = detailDbUseCase.resultFlow
-
-    init {
-        viewModelScope.launch {
-            dbFlow.collect {
-                Timber.e(it.toString())
-            }
-        }
-    }
-
-
     fun makeDbAction(response: MovieDetailResponse, active: Boolean) {
         detailDbUseCase.init(isFavAction = active, detailResponse = response)
         viewModelScope.launch {
             detailDbUseCase.launch()
         }
     }
-
 }

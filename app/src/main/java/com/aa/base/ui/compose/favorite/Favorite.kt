@@ -43,10 +43,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.aa.base.R
+import com.aa.base.ui.compose.common.ErrorPopUp
+import com.aa.base.ui.compose.common.ProgressScreen
 import com.aa.base.ui.compose.detail.FavIcon
-import com.aa.base.ui.compose.search.ErrorText
-import com.aa.base.ui.compose.search.ProgressScreen
 import com.aa.base.ui.configuration.AppTheme
+import com.aa.base.ui.viewmodels.FavoritesViewModel
 import com.aa.local.entities.movie.MovieDetailEntity
 import com.aa.model.generic.Magic
 
@@ -75,21 +76,14 @@ fun FavContainer(
     onMovieItemClicked: (MovieDetailEntity) -> Unit
 ) {
     when (resultState) {
-        is Magic.Progress -> {
-            ProgressScreen()
-        }
-
+        is Magic.Progress -> { ProgressScreen() }
         is Magic.Success -> {
             FavList(
                 movies = resultState.data,
                 onFav = { entity, isFav -> onFav(entity, isFav) },
                 onMovieSelected = { entity -> onMovieItemClicked(entity) })
         }
-
-        is Magic.Failure -> {
-            ErrorText("Failure: ${resultState.errorMessage}")
-        }
-
+        is Magic.Failure -> { ErrorPopUp(resultState.errorMessage) }
         else -> {}
     }
 }
