@@ -2,8 +2,8 @@ package com.aa.base.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.aa.base.ui.root.BaseViewModel
-import com.aa.data_usecase.detail.DetailDbUseCase
-import com.aa.data_usecase.fav.FetchFavsUseCase
+import com.aa.usecase.detail.DetailDbUseCase
+import com.aa.usecase.fav.FetchFavsUseCase
 import com.aa.local.entities.movie.MovieDetailEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.aa.data_usecase.base
+package com.aa.usecase.base
 
 import com.aa.model.generic.Magic
 import kotlinx.coroutines.flow.Flow

@@ -1,11 +1,8 @@
-package com.aa.data_usecase.base
+package com.aa.usecase.base
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
-import com.aa.data_usecase.base.ActionFlowUseCase
-import com.aa.local.entities.localsearch.LocalSearch
 import com.aa.model.generic.Magic
-import com.aa.model.search.SearchResponse
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

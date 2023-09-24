@@ -2,7 +2,7 @@ package com.aa.base.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.aa.base.ui.root.BaseViewModel
-import com.aa.data_usecase.SearchMovieUseCase
+import com.aa.usecase.SearchMovieUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

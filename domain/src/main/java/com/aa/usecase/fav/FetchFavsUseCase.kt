@@ -1,8 +1,8 @@
-package com.aa.data_usecase.fav
+package com.aa.usecase.fav
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
-import com.aa.data_usecase.base.FlowUseCase
+import com.aa.usecase.base.FlowUseCase
 import com.aa.local.entities.movie.MovieDetailEntity
 import com.aa.model.generic.Magic
 import kotlinx.coroutines.CoroutineDispatcher

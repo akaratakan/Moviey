@@ -1,4 +1,4 @@
-package com.aa.data_usecase
+package com.aa.usecase
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

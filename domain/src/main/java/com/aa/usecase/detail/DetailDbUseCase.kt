@@ -1,8 +1,8 @@
-package com.aa.data_usecase.detail
+package com.aa.usecase.detail
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
-import com.aa.data_usecase.base.ActionFlowUseCase
+import com.aa.usecase.base.ActionFlowUseCase
 import com.aa.local.entities.movie.MovieDetailEntity
 import com.aa.model.generic.Magic
 import com.aa.model.movie.MovieDetailResponse
@@ -14,9 +14,6 @@ import kotlinx.coroutines.flow.flowOn
 import timber.log.Timber
 import javax.inject.Inject
 
-/**
- * Created by atakanakar on 25.08.2023
- */
 class DetailDbUseCase @Inject constructor(
     private val movieRepository: MovieRepository,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher

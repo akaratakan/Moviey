@@ -1,10 +1,10 @@
-package com.aa.data_usecase
+package com.aa.usecase
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
-import com.aa.data_usecase.base.FlowUseCase
 import com.aa.model.generic.Magic
 import com.aa.model.movie.MovieDetailResponse
+import com.aa.usecase.base.FlowUseCase
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

@@ -1,8 +1,8 @@
-package com.aa.data_usecase
+package com.aa.usecase
 
 import com.aa.data.IoDispatcher
 import com.aa.data.MovieRepository
-import com.aa.data_usecase.base.ActionFlowUseCase
+import com.aa.usecase.base.ActionFlowUseCase
 import com.aa.model.generic.Magic
 import com.aa.model.search.SearchResponse
 import com.squareup.moshi.JsonDataException

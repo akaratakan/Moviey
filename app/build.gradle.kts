@@ -68,7 +68,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(project(":model"))
-    implementation(project(":usecase"))
+    implementation(project(":domain"))
     implementation(project(":local"))
 
 
